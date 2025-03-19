@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct HostProfileView: View {
+//    @Bindable var host: Attendee
+    @State private var selectedItem: PhotosPickerItem?
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }

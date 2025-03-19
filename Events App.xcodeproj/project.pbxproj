@@ -32,8 +32,8 @@
 		D6F447362D8B5CAE00D9935C = {
 			isa = PBXGroup;
 			children = (
-				D6F447412D8B5CAE00D9935C /* Events App */,
 				D6F447402D8B5CAE00D9935C /* Products */,
+				D6F447412D8B5CAE00D9935C /* Events App */,
 			);
 			sourceTree = "<group>";
 		};
