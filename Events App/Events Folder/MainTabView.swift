@@ -9,14 +9,14 @@ import SwiftUI
 
 
 struct MainTabView: View {
-
+    let host: Attendee
     var body: some View {
         TabView{
             EventListView()
                 .tabItem {
                     Label("Events", systemImage: "list.bullet")
                 }
-            HostProfileView ()
+            HostProfileView (host: host)
                 .tabItem{
                     Label("profile", systemImage: "person.circle")
                 }
@@ -24,6 +24,3 @@ struct MainTabView: View {
     }
 }
 
-#Preview {
-    MainTabView()
-}
