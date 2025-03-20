@@ -1,8 +1,6 @@
 //
 //  EventDetailView.swift
 //  Events App
-//
-//
 
 import SwiftUI
 import SwiftData
