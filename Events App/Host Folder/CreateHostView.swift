@@ -80,6 +80,4 @@ struct CreateHostView: View {
 }
 
 
-#Preview {
-    CreateHostView()
-}
+

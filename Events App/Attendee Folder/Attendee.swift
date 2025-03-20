@@ -8,7 +8,6 @@ import Foundation
 import SwiftUI
 import SwiftData
 
-import SwiftData
 
 @Model
 class Attendee {

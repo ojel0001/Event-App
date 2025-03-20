@@ -1,28 +1,31 @@
 //
 //  EventDetailView.swift
 //  Events App
+//
+//
 
 import SwiftUI
 import SwiftData
 
-struct Attendee: View {
+struct AttendeeRow: View {
     let attendee: Attendee
     
     var body: some View {
-        HStack(spacing: 16){
+        HStack(spacing: 16) {
             if let avatarData = attendee.avatar, let image = UIImage(data: avatarData) {
                 Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width:40, height:40)
+                    .frame(width: 40, height: 40)
                     .clipShape(Circle())
-            }else{
+            } else {
                 Image(systemName: "person.crop.circle.fill")
                     .resizable()
-                    .frame(width:40, height:40)
+                    .frame(width: 40, height: 40)
                     .foregroundStyle(.secondary)
             }
-            VStack(alignment: .leading){
+            
+            VStack(alignment: .leading) {
                 Text("\(attendee.firstName) \(attendee.lastName)")
                     .font(.headline)
                 
@@ -36,14 +39,14 @@ struct Attendee: View {
     }
 }
 
-
-
 struct EventDetailView: View {
-    @Binding var eevnt: Event
+    @Bindable var event: Event
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
-    @State private var showDeleteConfirmation: Bool = false
-    @State private var isEditing: Bool = false
+    @State private var showDeleteConfirmation = false
+    @State private var showAddAttendee = false
+    @State private var isEditing = false
+    
     @State private var editName = ""
     @State private var editStartDate = Date()
     @State private var editEndDate: Date?
@@ -214,6 +217,5 @@ struct EventDetailView: View {
         isEditing = false
     }
 }
-
 
 
