@@ -22,7 +22,6 @@ struct CreateHostView: View {
             Form {
                 Section {
                     HStack(spacing: 20) {
-                        // Profile Image Picker
                         PhotosPicker(selection: $selectedItem, matching: .images) {
                             if let avatarData = avatar, let image = UIImage(data: avatarData) {
                                 Image(uiImage: image)

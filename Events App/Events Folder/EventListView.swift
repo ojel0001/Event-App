@@ -2,7 +2,6 @@
 //  EventListView.swift
 //  Events App
 //
-//  Created by sunny ojelabi on 2025-03-19.
 //
 
 import SwiftUI
@@ -46,7 +45,7 @@ struct EventListView: View {
                           ToolbarItem(placement: .primaryAction) {
                               NavigationLink {
                                   if let host = hosts.first {
-                                      AddEventView(host: host) 
+                                      AddEventView(host: host)
                                   } else {
                                       ContentUnavailableView(
                                           "No Host Found",
@@ -88,8 +87,5 @@ struct EventRow: View {
 }
 
 
-#Preview {
-    EventListView()
-}
 
 
